@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "crisp-vessel"
+version = "0.9.3"
+description = "A lightweight CLI tool"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "omar novak" }]
+requires-python = ">=3.9"
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+crisp_vessel = "crisp_vessel.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
